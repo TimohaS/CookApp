@@ -1,0 +1,9 @@
+server/.pyc
+server/__pycache__
+server/virtualenv
+server/db.sqlite3
+server/./static
+server/Scripts
+server/Lib
+server/pyvenv.cfg
+.idea
