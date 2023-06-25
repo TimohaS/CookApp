@@ -42,10 +42,10 @@ class Ingredient(models.Model):
     name = models.CharField(max_length=100)
     weight = models.IntegerField(default=0, validators=[MinValueValidator(1), MaxValueValidator(1000)])
     CATEGORIES = (
-        ('Жидкое', 'Жидкое'),
-        ('Твердое', 'Твердое')
+        (0, 'Жидкое'),
+        (1, 'Твердое')
     )
-    category = models.CharField(max_length=50, choices=CATEGORIES)
+    category = models.BooleanField(choices=CATEGORIES)
     dish = models.ManyToManyField(Dish, null=True, blank=True)
 
     def __str__(self):
